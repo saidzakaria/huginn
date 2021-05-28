@@ -127,7 +127,9 @@ Ensure you can use the InnoDB engine which is necessary to support long indexes
 
     # If this fails, check your MySQL config files (e.g. `/etc/mysql/*.cnf`, `/etc/mysql/conf.d/*`)
     # for the setting "innodb = off"
-
+Create huginn_production database
+    mysql> create database huginn_production;
+    
 Grant the Huginn user necessary permissions on the database
 
     mysql> GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, INDEX, ALTER, LOCK TABLES ON `huginn_production`.* TO 'huginn'@'localhost';
